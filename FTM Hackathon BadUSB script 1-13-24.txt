@@ -1,0 +1,25 @@
+REM This is BadUSB demo script for Discord
+
+REM Open Discord
+DELAY 1000
+GUI r
+DELAY 500
+STRING %USERPROFILE%\AppData\Local\Discord\app-1.0.9030\Discord.exe
+DELAY 500
+ENTER
+DELAY 5000
+
+CTRL k
+DELAY 1000
+STRING FTM
+DELAY 1000
+ENTER
+DELAY 1000
+
+
+STRING Hello World! This is a BadUSB Rubber Ducky script!!! You have been pwned :)
+ENTER
+DEFAULT_DELAY 50
+ENTER
+
+
