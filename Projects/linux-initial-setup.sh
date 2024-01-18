@@ -1,8 +1,17 @@
 #!/bin/bash
 
+#Check if shell has root
+current-user=$(whoami)
+if [ current-user == root ]; 
+then 
+	echo "Run script again without initially typing sudo"
+	exit 1
+fi
+
 #Ubuntu
 #Install stuff
 sudo apt update
+sudo apt upgrade
 sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava
 
 #Configure tmux
