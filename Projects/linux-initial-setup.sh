@@ -2,7 +2,7 @@
 
 #Check if shell has root
 current-user=$(whoami)
-if [ current-user == root ]; 
+if [ $(current-user) == root ]; 
 then 
 	echo "Run script again without initially typing sudo"
 	exit 1
