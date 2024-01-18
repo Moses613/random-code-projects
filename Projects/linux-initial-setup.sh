@@ -1,8 +1,10 @@
 #!/bin/bash
 
+echo "Make sure to run this in bash, not accidentally override with sh"
+
 #Check if shell has root
-current-user=$(whoami)
-if [ $(current-user) == root ]; 
+current_user=$(whoami)
+if [ "$current_user" == "root" ]; 
 then 
 	echo "Run script again without initially typing sudo"
 	exit 1
