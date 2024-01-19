@@ -1,11 +1,16 @@
 #!/bin/bash
 
-echo "Make sure to run this in bash, not accidentally override with sh"
-echo
+#Check that user did not type sh ./filename by mistake
+INTERPRETER=$(ps h -p $$ -o args='' | cut -f1 -d' ')
+if [ "$INTERPRETER" != "/bin/bash" ];
+then
+	echo "Use chmod u+x to give script permission to run as a program and then run it directly"
+	exit 1
+fi
 
 #Check if shell has root
-current_user=$(whoami)
-if [ "$current_user" == "root" ]; 
+CURRENT_USER=$(whoami)
+if [ "$CURRENT_USER" == "root" ]; 
 then 
 	echo "Run script again without initially typing sudo"
 	exit 1
