@@ -41,3 +41,5 @@ echo
 #Messages 
 echo "Remember to authorize your GitHub account"
 
+cowsay "SCRIPT COMPLETE" | lolcat
+
