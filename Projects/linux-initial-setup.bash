@@ -20,7 +20,7 @@ fi
 #Install stuff
 sudo apt update
 sudo apt upgrade
-sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava
+sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofetch
 echo
 echo
 
