@@ -10,7 +10,7 @@ fi
 
 #Check if shell has root
 CURRENT_USER=$(whoami)
-if [ "$CURRENT_USER" == "root" ]; 
+if [ "$CURRENT_USER" == root ];
 then 
 	echo "Run script again without initially typing sudo"
 	exit 1
