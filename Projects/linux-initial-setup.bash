@@ -24,6 +24,14 @@ sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofet
 echo
 echo
 
+# cat /etc/*-release | grep opensuse
+# if $? == 0
+#
+#openSUSE
+#sudo zypper ref
+#sudo zypper up
+#sudo zypper in cowsay fortune git gh tmux sl cava neofetch
+
 #Configure tmux
 cd ~
 wget https://raw.githubusercontent.com/Moses613/random-code-projects/main/Configs/.tmux.conf
@@ -36,6 +44,12 @@ git config --global core.editor "nano"
 git config --global user.name "Moses613"
 git config --global user.email "44594121+Moses613@users.noreply.github.com" 
 echo "git configured"
+echo
+
+#clone this repo
+cd ~
+git clone https://github.com/Moses613/random-code-projects
+echo
 echo
 
 #Messages 
