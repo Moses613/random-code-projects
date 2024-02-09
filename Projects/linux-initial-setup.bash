@@ -16,21 +16,25 @@ then
 	exit 1
 fi
 
+#Install Stuff
 #Ubuntu
-#Install stuff
-sudo apt update
-sudo apt upgrade
-sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofetch
-echo
-echo
-
-# cat /etc/*-release | grep opensuse
-# if $? == 0
-#
+if grep -iq 'ubuntu' /etc/*-release;
+then
+	sudo apt update
+	sudo apt upgrade
+	sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofetch
+	echo
+	echo
 #openSUSE
-#sudo zypper ref
-#sudo zypper up
-#sudo zypper in cowsay fortune git gh tmux sl cava neofetch
+elif grep -iq 'opensuse' /etc/*-release;
+then
+	sudo zypper ref
+	sudo zypper up
+	sudo zypper in cowsay fortune git gh tmux sl cava neofetch
+else
+	echo "ERROR: Unknown OS"
+	exit 1
+fi
 
 #Configure tmux
 cd ~
@@ -56,4 +60,5 @@ echo
 echo "Remember to authorize your GitHub account"
 
 cowsay "SCRIPT COMPLETE"
+
 
