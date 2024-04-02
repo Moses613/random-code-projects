@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#Run
+# wget https://raw.githubusercontent.com/Moses613/random-code-projects/main/Projects/linux-initial-setup.bash
+#to download this
+
 #Check that user did not type sh ./filename by mistake
 INTERPRETER=$(ps h -p $$ -o args='' | cut -f1 -d' ')
 if [ "$INTERPRETER" != "/bin/bash" ];
@@ -10,7 +14,7 @@ fi
 
 #Check if shell has root
 if [ "${UID}" -eq 0 ];
-then 
+then
 	echo "You are root."
 	echo "Run script again without initially typing sudo"
 	exit 1
@@ -30,7 +34,7 @@ elif grep -iq 'opensuse' /etc/*-release;
 then
 	sudo zypper ref
 	sudo zypper up
-	sudo zypper in cowsay fortune git gh tmux sl cava neofetch
+	sudo zypper in cowsay fortune git gh tmux sl cava neofetch distrobox gstreamer-plugins-bad gstreamer-plugins-ugly clementine
 else
 	echo "ERROR: Unknown OS"
 	exit 1
@@ -46,7 +50,7 @@ echo
 #configure git
 git config --global core.editor "nano"
 git config --global user.name "Moses613"
-git config --global user.email "44594121+Moses613@users.noreply.github.com" 
+git config --global user.email "44594121+Moses613@users.noreply.github.com"
 echo "git configured"
 echo
 
@@ -56,9 +60,8 @@ git clone https://github.com/Moses613/random-code-projects
 echo
 echo
 
-#Messages 
+#Messages
 echo "Remember to authorize your GitHub account"
 
 cowsay "SCRIPT COMPLETE"
-
 
