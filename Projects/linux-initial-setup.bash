@@ -35,6 +35,14 @@ then
 	sudo zypper ref
 	sudo zypper up
 	sudo zypper in cowsay fortune git gh tmux sl cava neofetch distrobox gstreamer-plugins-bad gstreamer-plugins-ugly clementine
+#RHEL
+elif grep -iq 'Red Hat' /etc/*-release;
+then
+	echo "Use your Ansible Podman login here:"
+	podman login registry.redhat.io
+	sudo dnf check-update
+	sudo dnf upgrade
+	sudo dnf install ansible-core ansible-navigator tmux
 else
 	echo "ERROR: Unknown OS"
 	exit 1
