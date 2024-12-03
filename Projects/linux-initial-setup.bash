@@ -26,7 +26,7 @@ if grep -iq 'ubuntu' /etc/*-release;
 then
 	sudo apt update
 	sudo apt upgrade
-	sudo apt-get install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofetch
+	sudo apt install cowsay cowsay-off fortune git gh tmux sl lolcat cava neofetch vlc cifs-utils
 	echo
 	echo
 #openSUSE
